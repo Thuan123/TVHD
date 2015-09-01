@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screenchonkenh"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:onClick="hideSoftKeyboard"
+                android:layout_weight="1.6" >
+                <Button 
+                    android:id="@+id/backbtn"
+                    android:layout_width="41dp"
+                    android:background="@drawable/icon_back"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="41dp"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.6"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <EditText
+                        android:id="@+id/search_text"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.6"
+                        android:background="@drawable/searchedit"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:hint="Enter Chanel"
+                        android:padding="7dp" />
+
+                    <Button
+                        android:id="@+id/search_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/searchbtn" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="14dp" >
+
+            <GridView
+                android:id="@+id/kenh_id"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:columnWidth="65dp"
+                android:gravity="center"
+                android:horizontalSpacing="4dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="4dp" >
+            </GridView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" >
+
+        <Button
+            android:id="@+id/hoanthanh"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_play_video"
+            android:gravity="center"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/khung_kenh"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:paddingBottom="6dp"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.99" >
+
+            <RelativeLayout
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/favorite_img"
+                    android:layout_width="42dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="42dp"
+                    android:layout_gravity="top|right"
+                    android:visibility="gone"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/dau_kenhyeuthich"/>
+                <ImageView
+                    android:id="@+id/favorite_img_normal"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="top|right"
+                    android:visibility="visible"
+                   />
+                
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/image_loading" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.01"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.4"
+                android:background="@drawable/line_khungkenh" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/img_name"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.6"
+            android:gravity="center"
+            android:text="DAO HONG THUAN"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4" />
+    </LinearLayout>
+
+</LinearLayout>

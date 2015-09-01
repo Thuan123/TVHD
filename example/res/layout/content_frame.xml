@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/video_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:id="@+id/topbar"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/topbar_menu"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <ImageButton
+                    android:id="@+id/menu_button"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_weight="1.95"
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:src="@drawable/icon_menu" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.05"
+                    android:background="@drawable/line_vertical" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2" >
+
+                <EditText
+                    android:id="@+id/menu_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|left"
+                    android:background="#00000000"
+                    android:drawableRight="@drawable/icon_search"
+                    android:gravity="center|left"
+                    android:hint="Enter Chanel"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:textSize="20sp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/nguonkhac"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:drawableRight="@drawable/icon_open"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="40dp"
+                    android:text="Nguồn Khác"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/star_menu"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.05"
+                    android:background="@drawable/line_vertical" />
+
+                <ImageButton
+                    android:id="@+id/menu_star"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.95"
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:src="@drawable/icon_favorite_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8"
+            android:background="#BBBBBB" >
+
+            <FrameLayout
+                android:id="@+id/main_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BBBBBB" />
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/videodrawer"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#BBBBBB" >
+
+        <FrameLayout
+            android:id="@+id/video_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BBBBBB" />
+    </android.support.v4.widget.DrawerLayout>
+
+</FrameLayout>

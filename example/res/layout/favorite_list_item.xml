@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="85dp"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.98"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/them_chanel"
+                android:layout_width="fill_parent"
+                android:layout_height="85dp"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:paddingLeft="4dp" >
+
+            <TextView
+                android:id="@+id/text_themkenh"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|center"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="Thêm kênh yêu thích"
+                android:textColor="#ffe65a"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
+            android:padding="8dp"
+            android:visibility="visible" >
+
+            <!--<ImageView
+                android:id="@+id/delete_press"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_delete_pressed"
+                android:visibility="gone" />-->
+
+            <ImageView
+                android:id="@+id/delete_normal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/icon_delete_normal" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:background="#00000000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.6" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:background="#00000000" />
+    </LinearLayout>
+
+</LinearLayout>

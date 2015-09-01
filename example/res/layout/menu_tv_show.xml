@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:weightSum="2">
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@drawable/topbar_menu"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageButton
+                android:id="@+id/menu_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|left"
+                android:layout_weight="1.95"
+                android:background="#0000"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_menu" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.05"
+                android:background="@drawable/line_vertical" />
+            
+        </LinearLayout>
+
+        <SearchView
+            android:id="@+id/menu_search"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2" >
+        </SearchView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" 
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.05"
+                android:background="@drawable/line_vertical" />
+            <ImageButton
+                android:id="@+id/menu_star"
+                android:layout_width="0dp"
+                android:layout_weight="1.95"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="#0000"
+                android:padding="12dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_favorite_normal" />
+        </LinearLayout>
+    </LinearLayout>
+    
+
+</LinearLayout>

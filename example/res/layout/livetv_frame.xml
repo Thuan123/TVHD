@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fcf="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/liveframe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screentv"
+    android:orientation="vertical"
+    android:weightSum="3" >
+
+    <LinearLayout
+        android:id="@+id/layoutview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:background="#000000" />
+
+        <!--  -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.8" >
+
+            <LinearLayout
+                android:id="@+id/show_live"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:weightSum="2" >
+
+                <io.vov.vitamio.widget.CenterLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.9"
+                    android:orientation="vertical" >
+
+                    <SurfaceView
+                        android:id="@+id/surface"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center" >
+                    </SurfaceView>
+                </io.vov.vitamio.widget.CenterLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:background="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pauseLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_title"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="3" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/enjoybtn_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical|left"
+                        android:padding="8dp"
+                        android:src="@drawable/button_favorite_normal" />
+
+                    <ImageView
+                        android:id="@+id/enjoybtn_press"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical|left"
+                        android:padding="8dp"
+                        android:src="@drawable/button_favorite_pressed"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/pausebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:src="@drawable/button_pause_80x100" />
+
+                    <ImageView
+                        android:id="@+id/replaybtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:src="@drawable/button_play_80x100"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center|right"
+                    android:layout_weight="1"
+                    android:gravity="center|right" >
+
+                    <ImageView
+                        android:id="@+id/bigbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="10dp"
+                        android:src="@drawable/button_viewfull"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/smallbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical|right"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Exit"
+                        android:textColor="#ffffff"
+                        android:textSize="19sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <at.technikum.mti.fancycoverflow.FancyCoverFlow
+            android:id="@+id/fancyCoverFlow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fcf:maxRotation="-45"
+            fcf:scaleDownGravity="0.5"
+            fcf:unselectedAlpha="0.5"
+            fcf:unselectedSaturation="0.0"
+            fcf:unselectedScale="0.1" />
+
+        <!--
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/horizontalLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/khung_lichchieu"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:src="@drawable/text_dangchieu" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.6"
+            android:gravity="center"
+            android:paddingBottom="4dp" >
+
+            <ListView
+                android:id="@+id/list_dang_chieu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
